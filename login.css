@@ -1,0 +1,97 @@
+.login {
+  display: flex;
+  min-height: 100vh;
+}
+
+.login > * {
+  flex: 50% 1;
+}
+
+.login__content {
+  max-width: 423px;
+}
+
+.login__container {
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.logo {
+  width: 250px;
+  height: auto;
+}
+
+.login__text {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.login__form {
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.login__form > label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+}
+
+.login__form > button {
+  background-color: var(--green-500);
+  color: var(--white);
+}
+
+.input > img {
+  position: relative;
+  width: 24px;
+  height: auto;
+  z-index: 2;
+  left: 0.25rem;
+}
+
+.input {
+  height: 2.5rem;
+  padding: 0 0.2rem;
+  position: relative;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input > input {
+  padding-left: 40px;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+.login__image {
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: end;
+  padding: 1rem;
+  background-image: url(images/WhatsApp\ Image\ 2022-09-02\ at\ 2.53.42\ PM.jpeg);
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+.login__image > span {
+  font-size: var(--heading-2);
+  line-height: var(--heading-line-height);
+  color: var(--white);
+  max-width: 497px;
+}
+
+@media (max-width: 800px) {
+  .login__image {
+    display: none;
+  }
+}

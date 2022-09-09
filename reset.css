@@ -1,0 +1,145 @@
+:root {
+  --heading-1: 3rem;
+  --heading-2: 2.1rem;
+  --heading-3: 1.5rem;
+  --heading-4: 1.2rem;
+  --heading-line-height: 1.1;
+
+  --green-500: #008583;
+  --green-400: hsl(179, 45%, 45%);
+  --green-50: #f1f8f8;
+
+  --gray-900: #111827;
+  --gray-800: #1f2937;
+  --gray-700: #374151;
+  --gray-200: #e5e7eb;
+  --gray-100: #f3f4f6;
+  --gray-50: #fafafa;
+
+  --links: #2563eb;
+
+  --white: #ffffff;
+  --black: #000000;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+p,
+figure,
+blockquote,
+dl,
+dd {
+  margin: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul,
+ol {
+  list-style: none;
+  padding: 0;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+  font-family: sans-serif;
+  color: var(--gray-800);
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+h1 {
+  font-size: var(--heading-1);
+}
+
+h2 {
+  font-size: var(--heading-2);
+}
+
+h3 {
+  font-size: var(--heading-3);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  color: var(--gray-900);
+  line-height: var(--heading-line-height);
+}
+
+label {
+  color: var(--gray-900);
+}
+
+p,
+input,
+select {
+  color: var(--gray-800);
+}
+
+button {
+  cursor: pointer;
+  border: none;
+  font-weight: 500;
+  height: 2.5rem;
+  padding: 0 0.5rem;
+}
+
+select {
+  height: 2.5rem;
+  padding: 0 0.5rem;
+}
