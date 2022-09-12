@@ -9,24 +9,28 @@
   top: 0;
   background-color: var(--black);
   padding: 1rem 0;
+  transition: width 150ms ease-in;
+}
+.drawer--small {
+  width: 6rem;
 }
 .drawer__actions {
   display: flex;
+  align-items: center;
   gap: 1rem;
   padding: 0 2rem;
-  align-items: center;
 }
 .drawer__logo {
   width: auto;
   height: 32px;
 }
-
 .drawer__link {
+  white-space: nowrap;
   opacity: 0.75;
   padding: 1rem 2rem;
   text-decoration: none;
   display: flex;
-  gap: 1rem;
+  gap: 2rem;
   align-items: center;
   color: var(--gray-50);
   transition: all 350ms ease-in;
