@@ -3,13 +3,14 @@
   grid-template-columns: auto 1fr;
 }
 .drawer {
+  width: 300px;
   overflow: hidden;
   height: 100vh;
   position: sticky;
   top: 0;
   background-color: var(--black);
   padding: 1rem 0;
-  transition: width 150ms ease-in;
+  transition: width 250ms ease-in;
 }
 .drawer__logo {
   width: auto;
@@ -40,6 +41,10 @@
   background-color: var(--gray-900);
   color: var(--green-500);
 }
+.drawer__link>img{
+  width: 32px;
+  height: auto;
+}
 .drawer__link--active {
   color: var(--green-500);
   font-weight: 800;
@@ -59,6 +64,10 @@
   gap: 0.5rem;
   align-items: center;
   border-radius: 6px;
+  transition: background-color 250ms ease-in-out;
+}
+.navbar__close-sesion:hover{
+  background-color: var(--gray-200);
 }
 main {
   padding: 0 1rem 1rem 1rem;
@@ -99,7 +108,7 @@ header {
 .two-columns {
   display: grid;
   gap: 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 326px), 1fr));
 }
 
 label {
@@ -135,10 +144,10 @@ label > input {
   gap: 0.25rem;
   align-items: center;
   justify-content: center;
-  height: 40px;
   padding: 0 1rem;
   background-color: transparent;
   border-radius: 6px;
+  transition: all 250ms ease-in-out;
 }
 .button:hover {
   background-color: var(--green-400);
@@ -175,6 +184,13 @@ label > input {
   }
   .button > img {
     width: 1.5rem;
+  }
+}
+
+@media (max-width: 1060px) {
+  .header__title > img {
+    width: 40px;
+    height: auto;
   }
 }
 

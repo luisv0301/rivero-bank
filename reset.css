@@ -15,6 +15,11 @@
   --gray-200: #e5e7eb;
   --gray-100: #f3f4f6;
   --gray-50: #fafafa;
+  --gray-500: #6b7280;
+
+  --success: #22c55e;
+  --danger: #f31414;
+  --blue: #2563eb;
 
   --links: #2563eb;
 
@@ -135,6 +140,11 @@ input,
 select {
   color: var(--gray-800);
   background-color: var(--white);
+  border: 1px solid var(--gray-500);
+}
+:where(input, select):not(:disabled):focus{
+  outline: 1px solid var(--green-500);
+  outline-offset: 0.2rem;
 }
 
 input:disabled,
@@ -155,3 +165,21 @@ select {
   height: 2.5rem;
   padding: 0 0.5rem;
 }
+
+@media (max-width: 450px) {
+  :root{
+    --heading-1: 2rem;
+    --heading-2: 1.6rem;
+    --heading-3: 1.4rem;
+    --heading-4: 1.2rem;
+  }
+  button {
+    font-size: 0.8rem;
+    height: 2.25rem;
+  }
+  a{
+    font-size: 0.8rem;
+  }
+
+  
+  }
