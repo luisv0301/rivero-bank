@@ -253,6 +253,11 @@ th, td{
   }
 
   @media (max-width: 940px)  {
+    .header__description > img {
+        width: 40px;
+        height: auto;
+    
+}
     width--lg{
         width: auto;
     }
@@ -315,6 +320,8 @@ th, td{
 
    
 }
+
+
 
 
   .drawer--visible{

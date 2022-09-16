@@ -216,6 +216,11 @@ th, td{
   }
 
   @media (max-width: 900px)  {
+    .header__description > img {
+        width: 40px;
+        height: auto;
+    
+}
 
 	/* Force table to not be like tables anymore */
 	table, thead, tbody, th, td, tr { 
