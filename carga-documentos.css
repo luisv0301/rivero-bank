@@ -82,6 +82,10 @@ label {
   .drawer {
     display: none;
   }
+  .header__title > img {
+    width: 40px;
+    height: auto;
+  }
   .hambur-menu--mobile {
     display: block;
   }
@@ -98,11 +102,11 @@ label {
   }
 }
 
-@media (max-width: 1060px) {
-  .header__title > img {
-    width: 40px;
-    height: auto;
+@media (max-width: 351px) {
+  .two-columns{
+    grid-template-columns: 1fr;
   }
+
 }
 
 .drawer--visible {
