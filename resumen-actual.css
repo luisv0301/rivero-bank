@@ -2,75 +2,11 @@
   display: grid;
   grid-template-columns: auto 1fr;
 }
-.drawer {
-  width: 300px;
-  overflow: hidden;
-  height: 100vh;
-  position: sticky;
-  top: 0;
-  background-color: var(--black);
-  padding: 1rem 0;
-  transition: width 250ms ease-in;
-}
 
-.drawer__logo {
-  width: auto;
-  height: 32px;
-}
 .drawer--small {
   width: 6rem;
 }
-.drawer__actions {
-  display: flex;
-  align-items: center;
-  gap: 1rem;
-  padding: 0 2rem;
-}
 
-.drawer__link {
-  opacity: 0.75;
-  padding: 1rem 2rem;
-  text-decoration: none;
-  display: flex;
-  gap: 2rem;
-  align-items: center;
-  color: var(--gray-50);
-  white-space: nowrap;
-  transition: all 350ms ease-in;
-}
-.drawer__link > img {
-  width: 32px;
-  height: auto;
-}
-
-.drawer__link:hover {
-  background-color: var(--gray-900);
-  color: var(--green-500);
-}
-.drawer__link--active {
-  color: var(--green-500);
-  font-weight: 800;
-}
-
-.navbar {
-  height: 70px;
-  padding: 1rem;
-  border-bottom: 1px solid var(--gray-200);
-}
-.navbar__close-sesion {
-  background-color: var(--gray-100);
-  margin-left: auto;
-  height: 36px;
-  padding: 0 0.5rem;
-  display: flex;
-  gap: 0.5rem;
-  align-items: center;
-  border-radius: 6px;
-  transition: background-color 250ms ease-in-out;
-}
-.navbar__close-sesion:hover {
-  background-color: var(--gray-200);
-}
 main {
   padding: 0 1rem 1rem 1rem;
 }
@@ -109,42 +45,6 @@ header {
   height: auto;
 }
 
-.hambur-menu {
-  line-height: 0;
-  background: none;
-  padding: 0;
-}
-
-.hambur-menu--mobile {
-  display: none;
-}
-.hambur-menu--mobile path {
-  stroke: var(--gray-700);
-}
-.button {
-  text-decoration: none;
-  display: flex;
-  gap: 0.25rem;
-  align-items: center;
-  justify-content: center;
-  padding: 0 1rem;
-  background-color: transparent;
-  border-radius: 6px;
-  transition: all 250ms ease-in-out;
-}
-.button:hover {
-  background-color: var(--green-400);
-}
-.button--secondary {
-  border: 1px solid var(--green-500);
-}
-.button--secondary:hover {
-  color: var(--white);
-}
-.button > img {
-  width: 1.5rem;
-}
-
 .socio__name {
   font-size: var(--heading-3);
 }
@@ -181,6 +81,7 @@ header {
   padding: 1rem;
   border: 1px solid var(--gray-200);
   flex: 1;
+  white-space: nowrap;
 }
 .socio__saldo::before {
   content: "";
