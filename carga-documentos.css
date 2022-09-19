@@ -31,7 +31,7 @@ header {
 .two-columns {
   display: grid;
   gap: 2rem 1rem;
-  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(327px, 1fr));
 }
 
 input[type="file"] {
@@ -100,13 +100,6 @@ label {
   .button > img {
     width: 1.5rem;
   }
-}
-
-@media (max-width: 351px) {
-  .two-columns{
-    grid-template-columns: 1fr;
-  }
-
 }
 
 .drawer--visible {
