@@ -116,14 +116,13 @@ input[type="file"] {
 }
 
 .input--file {
-  background-color: var(--gray-100);
   cursor: pointer;
-
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  border: 1px solid var(--gray-200);
+  background-color: var(--white);
+  border: 1px solid var(--gray-500);
   height: 160px;
 }
 .input--file > svg {

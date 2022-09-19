@@ -2,18 +2,19 @@
   display: grid;
   grid-template-columns: auto 1fr;
 }
+.home__content {
+  padding: 1rem 0;
+}
 .drawer {
-  width: 300px;
   overflow-x: hidden;
-  overflow-y: auto;
+  overflow-y: scroll;
   height: 100vh;
   position: sticky;
   top: 0;
   background-color: var(--black);
   padding: 1rem 0;
-  transition: width 250ms ease-in;
+  transition: width 150ms ease-in;
 }
-
 .drawer__logo {
   width: auto;
   height: 32px;
@@ -29,6 +30,7 @@
 }
 
 .drawer__link {
+  white-space: nowrap;
   opacity: 0.75;
   padding: 1rem 2rem;
   text-decoration: none;
@@ -36,14 +38,12 @@
   gap: 2rem;
   align-items: center;
   color: var(--gray-50);
-  white-space: nowrap;
   transition: all 350ms ease-in;
 }
 .drawer__link > img {
   width: 32px;
   height: auto;
 }
-
 .drawer__link:hover {
   background-color: var(--gray-900);
   color: var(--green-500);
@@ -79,10 +79,7 @@ main {
 header {
   padding: 1rem 0;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
   gap: 1rem;
-  align-items: center;
   border-bottom: 1px solid var(--gray-200);
 }
 
@@ -105,12 +102,6 @@ header {
   align-items: center;
 }
 
-.header__actions {
-  flex-wrap: wrap;
-  display: flex;
-  gap: 1rem;
-}
-
 .header__title {
   display: flex;
   gap: 1rem;
@@ -123,12 +114,13 @@ header {
 .quote {
   max-width: 550px;
 }
-.filters__group {
-  padding: 1rem 0;
-  display: flex;
-  flex-wrap: wrap;
+.form {
+  max-width: 670px;
+}
+.two-columns {
+  display: grid;
   gap: 1rem;
-  align-items: flex-end;
+  grid-template-columns: repeat(auto-fit, minmax(min(100%, 327px), 1fr));
 }
 
 label {
@@ -136,11 +128,53 @@ label {
   flex-direction: column;
   gap: 0.25rem;
 }
+label > textarea {
+  height: 160px;
+}
 label > input {
   height: 40px;
   padding: 0 0.5rem;
 }
+.full-column {
+  grid-column: 1/-1;
+}
+input[type="file"] {
+  visibility: hidden;
+}
 
+.input--file {
+  cursor: pointer;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--white);
+  border: 1px solid var(--gray-500);
+  height: 160px;
+}
+.input--file > svg {
+  margin-bottom: 1rem;
+  width: 3rem;
+  height: 3rem;
+  color: var(--gray-700);
+}
+.input--file > span {
+  font-weight: 500;
+  font-size: 0.8rem;
+  line-height: 1.4;
+  color: var(--gray-700);
+}
+
+.input__file-label {
+  color: var(--gray-900);
+  font-size: 1rem;
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.margin-top-sm {
+  margin-top: 1rem;
+}
 .hambur-menu {
   line-height: 0;
   background: none;
@@ -154,16 +188,15 @@ label > input {
   stroke: var(--gray-700);
 }
 .button {
-  white-space: nowrap;
   text-decoration: none;
   display: flex;
   gap: 0.25rem;
   align-items: center;
   justify-content: center;
+  height: 40px;
   padding: 0 1rem;
   background-color: transparent;
   border-radius: 6px;
-  transition: all 250ms ease-in-out;
 }
 .button:hover {
   background-color: var(--green-400);
@@ -172,76 +205,22 @@ label > input {
   background-color: var(--green-500);
   color: var(--white);
 }
-.button--secondary {
-  border: 1px solid var(--green-500);
+.button--terciary {
+  color: var(--green-500);
 }
-.button--secondary:hover {
+.button--terciary:hover {
   color: var(--white);
 }
 .button > img {
   width: 1.5rem;
 }
-.button__group > button {
-  padding: 0.25rem;
-  display: grid;
-  place-items: center;
-  background-color: transparent;
-}
-.button__group > button > svg {
-  width: 1.5rem;
-}
-.button__group > button > svg > path {
-  stroke: var(--gray-700);
-}
-.button__group > button > svg > path {
-  transition: color 250ms ease-in-out;
-}
-.button__group > button:hover > svg > path {
-  stroke: var(--green-500);
-}
-.button__group {
+.buttons {
   display: flex;
-  gap: 0.25rem;
+  margin-top: 1rem;
+  gap: 1rem;
 }
 
-table {
-  width: 100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-  text-align: start;
-  vertical-align: middle;
-  table-layout: fixed;
-  overflow-x: hidden;
-  word-break: break-word;
-}
-.width--sm {
-  width: 10%;
-}
-.width--md {
-  width: 12%;
-}
-.width--lg {
-  width: 30%;
-}
-td {
-  overflow: hidden;
-  white-space: nowrap;
-  text-overflow: ellipsis;
-}
-th,
-td {
-  padding: 0.5rem;
-}
-.table__header {
-  text-align: left;
-  background-color: var(--gray-50);
-  border-bottom: 1px solid var(--gray-200);
-}
-.socio__photo {
-  width: 48px;
-}
-
-@media (max-width: 1260px) {
+@media (max-width: 1060px) {
   .navbar {
     display: flex;
     justify-content: space-between;
@@ -252,6 +231,10 @@ td {
   }
   .hambur-menu--mobile {
     display: block;
+  }
+  .header__description > img {
+    width: 40px;
+    height: auto;
   }
   .home__container {
     grid-template-columns: auto;
@@ -266,96 +249,6 @@ td {
   }
 }
 
-@media (max-width: 920px) {
-  .header__description > img {
-    width: 40px;
-    height: auto;
-  }
-
-  /* Force table to not be like tables anymore */
-  table,
-  thead,
-  tbody,
-  th,
-  td,
-  tr {
-    display: block;
-  }
-
-  /* Hide table headers (but not display: none;, for accessibility) */
-  thead tr {
-    position: absolute;
-    top: -9999px;
-    left: -9999px;
-  }
-
-  td {
-    /* Behave  like a "row" */
-    white-space: normal;
-    border: none;
-    border-bottom: 1px solid #eee;
-    position: relative;
-    padding-left: 35%;
-  }
-
-  td:before {
-    /* Now like a table header */
-    position: absolute;
-    /* Top/left values mimic padding */
-    top: 50%;
-    left: 1rem;
-    width: 25%;
-    transform: translateY(-50%);
-    padding-right: 10px;
-    white-space: nowrap;
-    font-weight: 700;
-  }
-
-  /*
-	Label the data
-	*/
-  td:nth-of-type(1):before {
-    content: "Foto";
-  }
-  td:nth-of-type(2):before {
-    content: "Nombre";
-  }
-  td:nth-of-type(3):before {
-    content: "Email";
-  }
-  td:nth-of-type(4):before {
-    content: "Contrato 1";
-  }
-  td:nth-of-type(5):before {
-    content: "Depositos";
-  }
-  td:nth-of-type(6):before {
-    content: "Saldos";
-  }
-  td:nth-of-type(7):before {
-    content: "Acción";
-  }
-
-  .highlight {
-    background-color: var(--gray-200);
-  }
-  .margin-botton {
-    margin-bottom: 1rem;
-  }
-}
-
-@media (max-width: 430px) {
-  .button__group > button > svg {
-    width: 1rem;
-  }
-}
-
-@media (min-width: 1500px) {
-  .width--md {
-    width: 14%;
-  }
-}
-
 .drawer--visible {
   position: fixed;
   display: block;
@@ -363,7 +256,6 @@ td {
   top: 0;
   left: 0;
   height: 100%;
-  z-index: 1;
 }
 .no-visible {
   visibility: hidden;

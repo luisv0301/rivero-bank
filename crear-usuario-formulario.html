@@ -4,10 +4,11 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Solicitudes</title>
+    <title>Crear usuario</title>
     <link rel="stylesheet" href="reset.css" />
-    <link rel="stylesheet" href="solicitudes.css" />
+    <link rel="stylesheet" href="crear-usuario-formulario.css" />
   </head>
+
   <body>
     <div class="home__container">
       <nav class="drawer">
@@ -41,13 +42,16 @@
               >
             </li>
             <li>
-              <a href="" class="drawer__link"
-                ><img src="images/datos-personales.png" alt="" />Usuarios</a
+              <a href="" class="drawer__link drawer__link--active"
+                ><img
+                  src="images/datos-personales-green.png"
+                  alt=""
+                />Usuarios</a
               >
             </li>
             <li>
-              <a href="" class="drawer__link drawer__link--active"
-                ><img src="images/solicitudes-green.png" alt="" />Solicitudes</a
+              <a href="" class="drawer__link"
+                ><img src="images/solicitudes.png" alt="" />Solicitudes</a
               >
             </li>
             <li>
@@ -151,8 +155,8 @@
           <header>
             <div class="header__text">
               <div class="header__description">
-                <h1>Solicitudes</h1>
-                <img src="images/solicitudes-green.png" alt="" />
+                <h1>Usuarios</h1>
+                <img src="images/datos-personales-green.png" alt="" />
               </div>
               <span class="quote">
                 <q>
@@ -162,70 +166,99 @@
                 - Albert Einstein
               </span>
             </div>
-
-            <button class="button button--primary">
-              <svg
-                width="24"
-                height="24"
-                viewBox="0 0 24 24"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M12 4.5V19.5M19.5 12H4.5"
-                  stroke="#FAFAFA"
-                  stroke-width="2"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                />
-              </svg>
-              Crear solicitud
-            </button>
           </header>
           <div class="home__content">
-            <div class="table__container">
-              <table>
-                <thead class="table__header">
-                  <tr>
-                    <th>Titulo del caso</th>
-                    <th>Creacion</th>
-                    <th>Resolucion</th>
-                    <th>Estado</th>
-                    <th>Descripcion</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr class="margin-botton">
-                    <td class="highlight">Revision de Pago</td>
-                    <td>01/02/2022</td>
-                    <td>A34RV3WE001</td>
-                    <td>Aprovada</td>
-                    <td>En espera a ser procesada</td>
-                  </tr>
-                  <tr class="margin-botton">
-                    <td class="highlight">Revision de Pago</td>
-                    <td>01/02/2022</td>
-                    <td>A34RV3WE001</td>
-                    <td>Aprovada</td>
-                    <td>En espera a ser procesada</td>
-                  </tr>
-                  <tr class="margin-botton">
-                    <td class="highlight">Revision de Pago</td>
-                    <td>01/02/2022</td>
-                    <td>A34RV3WE001</td>
-                    <td>Aprovada</td>
-                    <td>En espera a ser procesada</td>
-                  </tr>
-                  <tr class="margin-botton">
-                    <td class="highlight">Revision de Pago</td>
-                    <td>01/02/2022</td>
-                    <td>A34RV3WE001</td>
-                    <td>Aprovada</td>
-                    <td>En espera a ser procesada</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
+            <form class="form">
+              <div class="form__group">
+                <div class="two-columns">
+                  <label class="input__file-label full-column">
+                    Foto de perfil
+                    <div class="input--file">
+                      <input type="file" accept="image/png, image/jpeg" />
+                      <svg
+                        xmlns="http://www.w3.org/2000/svg"
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke-width="1.5"
+                        stroke="currentColor"
+                        class="w-6 h-6"
+                      >
+                        <path
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                          d="M9 8.25H7.5a2.25 2.25 0 00-2.25 2.25v9a2.25 2.25 0 002.25 2.25h9a2.25 2.25 0 002.25-2.25v-9a2.25 2.25 0 00-2.25-2.25H15m0-3l-3-3m0 0l-3 3m3-3V15"
+                        />
+                      </svg>
+                      <span class="name">Click aquí para cargar foto</span>
+                      <span class="name">Solo archivos PNG,JPG o JPEG</span>
+                    </div>
+                  </label>
+                  <label class="full-column">
+                    Nombre completo
+                    <input type="text" />
+                  </label>
+
+                  <label class="full-column">
+                    Email
+                    <input type="text" />
+                  </label>
+
+                  <label class="full-column">
+                    Identificación
+                    <input type="text" />
+                  </label>
+
+                  <label class="full-column">
+                    Nacimiento
+                    <input type="date" />
+                  </label>
+
+                  <label class="full-column">
+                    Genero
+                    <select>
+                      <option value="masculino">Masculino</option>
+                      <option value="femenino">Femenino</option>
+                    </select>
+                  </label>
+
+                  <label class="full-column">
+                    Cargo
+                    <input type="text" />
+                  </label>
+                  <label class="full-column">
+                    Website
+                    <input type="text" />
+                  </label>
+                  <label>
+                    Celular
+                    <input type="text" />
+                  </label>
+                  <label>
+                    Telefono fijo
+                    <input type="text" />
+                  </label>
+
+                  <label class="full-column">
+                    Estado
+                    <select>
+                      <option value="activo">Activo</option>
+                      <option value="inactivo">Inactivo</option>
+                    </select>
+                  </label>
+
+                  <label class="full-column">
+                    Biografia
+                    <textarea></textarea>
+                  </label>
+                </div>
+              </div>
+            </form>
+          </div>
+          <div class="buttons">
+            <button class="button button--primary">
+              <img src="images/save.png" alt="" />Finalizar
+            </button>
+            <button class="button button--terciary">Cancelar</button>
           </div>
         </main>
       </div>
